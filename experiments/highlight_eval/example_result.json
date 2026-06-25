@@ -1,0 +1,62 @@
+{
+  "video_id": "example_001",
+  "duration": 30.0,
+  "highlights": [
+    {
+      "id": "hl_0001",
+      "start_time": 2.0,
+      "end_time": 16.0,
+      "duration": 14.0,
+      "score": 0.45,
+      "base_score": 0.45,
+      "selection_score": 0.45,
+      "overlap_penalty": 0.0,
+      "score_breakdown": {
+        "object": {"raw": 0.1, "weight": 0.25, "weighted": 0.025},
+        "motion": {"raw": 0.2, "weight": 0.20, "weighted": 0.04},
+        "speech": {"raw": 0.8, "weight": 0.20, "weighted": 0.16},
+        "scene": {"raw": 0.5, "weight": 0.15, "weighted": 0.075},
+        "quality": {"raw": 0.7, "weight": 0.20, "weighted": 0.14}
+      },
+      "reason": ["有字幕/语音(0.80)", "画面质量(0.70)"]
+    },
+    {
+      "id": "hl_0002",
+      "start_time": 19.0,
+      "end_time": 28.0,
+      "duration": 9.0,
+      "score": 0.50,
+      "base_score": 0.50,
+      "selection_score": 0.50,
+      "overlap_penalty": 0.0,
+      "score_breakdown": {
+        "object": {"raw": 0.3, "weight": 0.25, "weighted": 0.075},
+        "motion": {"raw": 0.4, "weight": 0.20, "weighted": 0.08},
+        "speech": {"raw": 0.6, "weight": 0.20, "weighted": 0.12},
+        "scene": {"raw": 0.9, "weight": 0.15, "weighted": 0.135},
+        "quality": {"raw": 0.7, "weight": 0.20, "weighted": 0.14}
+      },
+      "reason": ["场景切换点(0.90)", "有字幕/语音(0.60)"]
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_001",
+      "url": "/api/v1/videos/example_001/clips/clip_001",
+      "start_time": 2.0,
+      "end_time": 16.0,
+      "duration": 14.0,
+      "highlight_id": "hl_0001",
+      "size_bytes": 420000
+    },
+    {
+      "id": "clip_002",
+      "url": "/api/v1/videos/example_001/clips/clip_002",
+      "start_time": 19.0,
+      "end_time": 28.0,
+      "duration": 9.0,
+      "highlight_id": "hl_0002",
+      "size_bytes": 270000
+    }
+  ]
+}

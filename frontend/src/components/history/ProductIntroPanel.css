@@ -1,0 +1,9 @@
+.product-intro { background: var(--gradient-summary); border: 1px solid var(--color-primary-border); border-radius: var(--radius-xl); padding: var(--space-5); }
+.product-intro__heading { font-size: var(--font-size-2xl); font-weight: var(--font-weight-bold); margin: 0 0 var(--space-1); color: var(--color-text); }
+.product-intro__sub { font-size: var(--font-size-base); color: var(--color-text-muted); margin: 0 0 var(--space-4); }
+.product-intro__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+.product-intro__card { display: flex; gap: var(--space-3); padding: var(--space-3); background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+.product-intro__icon { font-size: 28px; flex-shrink: 0; line-height: 1; }
+.product-intro__card-title { font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); margin: 0 0 var(--space-1); color: var(--color-text); }
+.product-intro__card-desc { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin: 0; line-height: var(--line-height-normal); }
+@media (max-width: 768px) { .product-intro__grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,23 @@
+{
+  "video_id": "example_001",
+  "video_path": "data/demo_e2e_test.mp4",
+  "duration": 30.0,
+  "labels": [
+    {
+      "id": "gt_001",
+      "start_time": 5.0,
+      "end_time": 15.0,
+      "rating": 4,
+      "category": "speech",
+      "note": "关键信息介绍"
+    },
+    {
+      "id": "gt_002",
+      "start_time": 18.0,
+      "end_time": 28.0,
+      "rating": 5,
+      "category": "scene",
+      "note": "场景切换点"
+    }
+  ]
+}

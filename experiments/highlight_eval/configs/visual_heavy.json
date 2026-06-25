@@ -1,0 +1,15 @@
+{
+  "name": "visual_heavy",
+  "description": "Emphasizes object detection and motion — for sports, games, surveillance",
+  "weights": {
+    "object": 0.35,
+    "motion": 0.35,
+    "speech": 0.05,
+    "scene": 0.15,
+    "quality": 0.10
+  },
+  "diversity_lambda": 0.20,
+  "min_score": 0.0,
+  "min_duration": 2.0,
+  "max_duration": 30.0
+}

@@ -1,0 +1,75 @@
+/* ── Print styles ──────────────────────────────────
+   Hide non-essential elements when printing the report.
+*/
+
+@media print {
+  /* Hide interactive/sidebar elements */
+  .desktop-layout__sidebar,
+  .mobile-layout__sidebar,
+  .theme-toggle,
+  .report-actions,
+  .technical-info-panel__copy-btn,
+  .clip-explorer__actions,
+  .highlight-card__actions,
+  .video-player button,
+  .result-workspace__back-btn,
+  .result-workspace__mode-bar {
+    display: none !important;
+  }
+
+  /* Reset backgrounds for print */
+  body,
+  .desktop-layout,
+  .mobile-layout {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  [data-theme="dark"] body,
+  [data-theme="dark"] .desktop-layout,
+  [data-theme="dark"] .mobile-layout {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Ensure cards don't break across pages */
+  .card,
+  .report-overview,
+  .insight-panel,
+  .score-distribution,
+  .clip-explorer,
+  .report-actions,
+  .technical-info-panel,
+  .highlight-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+  }
+
+  /* Full width for print */
+  .desktop-layout__body {
+    flex-direction: column !important;
+  }
+
+  .desktop-layout__main {
+    width: 100% !important;
+  }
+
+  /* Keep text readable */
+  .highlight-card__score,
+  .report-overview__value {
+    color: #000 !important;
+  }
+
+  /* Ensure video player is hidden */
+  .result-workspace__player-section {
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  /* Reduce large JSON */
+  .technical-info-panel__json {
+    max-height: 200px;
+  }
+}

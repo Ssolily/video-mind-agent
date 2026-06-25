@@ -1,0 +1,12 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+SQLAlchemy>=2.0
+aiosqlite>=0.20
+python-multipart>=0.0.18
+opencv-python-headless>=4.10.0
+scenedetect>=0.5
+ultralytics>=8.3.0
+faster-whisper>=1.1.0
+
+pytest>=8.0
+pytest-asyncio>=0.24

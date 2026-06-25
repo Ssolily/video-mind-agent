@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "name": "example_highlight_eval",
+  "description": "Small example dataset with 3 video types for highlight evaluation",
+  "videos": [
+    {
+      "video_id": "lecture_001",
+      "category": "lecture",
+      "duration": 120.0,
+      "candidates_json": "../examples/lecture_candidates.json",
+      "labels_json": "../examples/lecture_label.json",
+      "notes": "speech-heavy lecture, speech_heavy config should rank better"
+    },
+    {
+      "video_id": "interview_001",
+      "category": "interview",
+      "duration": 90.0,
+      "candidates_json": "../examples/interview_candidates.json",
+      "labels_json": "../examples/interview_label.json",
+      "notes": "mixed speech+object, baseline should be stable"
+    },
+    {
+      "video_id": "sports_001",
+      "category": "sports",
+      "duration": 60.0,
+      "candidates_json": "../examples/sports_candidates.json",
+      "labels_json": "../examples/sports_label.json",
+      "notes": "motion/object heavy, visual_heavy should rank better"
+    }
+  ]
+}

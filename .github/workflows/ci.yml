@@ -1,0 +1,152 @@
+# =============================================================================
+# VideoMind Agent - CI Pipeline
+# =============================================================================
+# Runs on: push and pull_request to main/master
+# Jobs: backend tests, frontend tests, script smoke tests, docker config, privacy
+# =============================================================================
+
+name: VideoMind CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+env:
+  VIDEOMIND_DEVICE: cpu
+  VIDEOMIND_PLANNER_PROVIDER: rule
+  DEEPSEEK_API_KEY: ""
+  PYTHON_VERSION: "3.10"
+  NODE_VERSION: "20"
+
+jobs:
+  # ── Backend Tests ─────────────────────────────────────────────────────
+  backend-tests:
+    name: Backend Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Compile check
+        run: python -m compileall app scripts
+
+      - name: Run tests
+        run: pytest -ra -q
+        env:
+          YOLO_CONFIG_DIR: /tmp/yolo_cache
+
+  # ── Frontend Tests ────────────────────────────────────────────────────
+  frontend-tests:
+    name: Frontend Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Run tests
+        run: npm run test:run
+
+      - name: Build
+        run: npm run build
+
+  # ── Script Smoke Tests ────────────────────────────────────────────────
+  script-smoke-tests:
+    name: Script Smoke Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check check_storage.py
+        run: python ../scripts/check_storage.py --help
+
+      - name: Check cleanup_storage.py
+        run: python ../scripts/cleanup_storage.py --help
+
+      - name: Check check_worker.py
+        run: python ../scripts/check_worker.py --help
+
+      - name: Check cleanup_tasks.py
+        run: python ../scripts/cleanup_tasks.py --help
+
+      - name: Check verify_mvp_delivery.py
+        run: python ../scripts/verify_mvp_delivery.py --help
+
+      - name: Check check_privacy.py
+        run: python ../scripts/check_privacy.py --help
+
+  # ── Docker Config Check ───────────────────────────────────────────────
+  docker-config-check:
+    name: Docker Config Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check docker compose config
+        run: |
+          # Copy .env.docker for compose validation
+          cp .env.docker.example .env.docker
+          docker compose config
+        working-directory: .
+
+  # ── Privacy Check ────────────────────────────────────────────────────
+  privacy-check:
+    name: Privacy Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Run privacy check
+        run: python scripts/check_privacy.py --strict
+        working-directory: .

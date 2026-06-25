@@ -1,0 +1,106 @@
+.history-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.history-page__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.history-page__back-btn {
+  font-size: var(--font-size-md);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.history-page__back-btn:hover {
+  border-color: var(--color-primary-border);
+  background: var(--color-primary-light);
+}
+
+.history-page__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.history-page__count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.history-page__upload-btn {
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+
+.history-page__upload-btn:hover {
+  background: var(--color-primary-hover);
+}
+
+@media (max-width: 768px) {
+  .history-page {
+    padding: var(--space-3);
+  }
+  .history-page__title {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.history-page__header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.history-page__clear-btn {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-danger-border);
+  border-radius: var(--radius-md);
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.history-page__clear-btn:hover {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.history-page__clear-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .history-page__header {
+    flex-wrap: wrap;
+  }
+  .history-page__header-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

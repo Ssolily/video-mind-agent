@@ -1,0 +1,15 @@
+{
+  "name": "speech_heavy",
+  "description": "Emphasizes speech — for lectures, podcasts, interviews",
+  "weights": {
+    "object": 0.10,
+    "motion": 0.10,
+    "speech": 0.55,
+    "scene": 0.10,
+    "quality": 0.15
+  },
+  "diversity_lambda": 0.15,
+  "min_score": 0.0,
+  "min_duration": 3.0,
+  "max_duration": 60.0
+}

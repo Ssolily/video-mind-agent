@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "name": "real_highlight_eval_dataset",
+  "description": "Real video dataset for highlight evaluation — replace with actual video IDs and file paths after processing",
+  "videos": [
+    {
+      "video_id": "lecture_real_01",
+      "category": "lecture",
+      "duration": 900.0,
+      "candidates_json": "../candidates/lecture_real_01_candidates.json",
+      "labels_json": "../labels/lecture_real_01_label.json",
+      "notes": "Replace with actual video_id from pipeline, update duration, candidates and labels paths"
+    },
+    {
+      "video_id": "lecture_real_02",
+      "category": "lecture",
+      "duration": 1200.0,
+      "candidates_json": "../candidates/lecture_real_02_candidates.json",
+      "labels_json": "../labels/lecture_real_02_label.json",
+      "notes": ""
+    },
+    {
+      "video_id": "interview_real_01",
+      "category": "interview",
+      "duration": 600.0,
+      "candidates_json": "../candidates/interview_real_01_candidates.json",
+      "labels_json": "../labels/interview_real_01_label.json",
+      "notes": ""
+    },
+    {
+      "video_id": "interview_real_02",
+      "category": "interview",
+      "duration": 900.0,
+      "candidates_json": "../candidates/interview_real_02_candidates.json",
+      "labels_json": "../labels/interview_real_02_label.json",
+      "notes": ""
+    },
+    {
+      "video_id": "sports_real_01",
+      "category": "sports",
+      "duration": 480.0,
+      "candidates_json": "../candidates/sports_real_01_candidates.json",
+      "labels_json": "../labels/sports_real_01_label.json",
+      "notes": ""
+    },
+    {
+      "video_id": "sports_real_02",
+      "category": "sports",
+      "duration": 600.0,
+      "candidates_json": "../candidates/sports_real_02_candidates.json",
+      "labels_json": "../labels/sports_real_02_label.json",
+      "notes": ""
+    },
+    {
+      "video_id": "scene_change_01",
+      "category": "scene_change",
+      "duration": 300.0,
+      "candidates_json": "../candidates/scene_change_01_candidates.json",
+      "labels_json": "../labels/scene_change_01_label.json",
+      "notes": ""
+    },
+    {
+      "video_id": "low_info_01",
+      "category": "low_information",
+      "duration": 600.0,
+      "candidates_json": "../candidates/low_info_01_candidates.json",
+      "labels_json": "../labels/low_info_01_label.json",
+      "notes": ""
+    },
+    {
+      "video_id": "no_audio_01",
+      "category": "no_audio",
+      "duration": 300.0,
+      "candidates_json": "../candidates/no_audio_01_candidates.json",
+      "labels_json": "../labels/no_audio_01_label.json",
+      "notes": ""
+    }
+  ]
+}

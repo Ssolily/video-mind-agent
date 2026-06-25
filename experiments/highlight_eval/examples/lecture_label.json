@@ -1,0 +1,10 @@
+{
+  "video_id": "lecture_001",
+  "video_path": "",
+  "duration": 120.0,
+  "labels": [
+    {"id": "gt_001", "start_time": 0.0, "end_time": 20.0, "rating": 5, "category": "speech", "note": "开场-关键信息密集"},
+    {"id": "gt_002", "start_time": 25.0, "end_time": 50.0, "rating": 4, "category": "speech", "note": "核心讲解"},
+    {"id": "gt_003", "start_time": 80.0, "end_time": 100.0, "rating": 3, "category": "mixed", "note": "演示环节"}
+  ]
+}

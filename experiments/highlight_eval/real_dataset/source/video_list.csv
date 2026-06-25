@@ -1,0 +1,11 @@
+video_id,duration,category,video_path,notes
+lecture_real_01,900,lecture,,"speech-heavy lecture, ~15 min"
+lecture_real_02,1200,lecture,,"talking head, ~20 min"
+interview_real_01,600,interview,,"two-person interview, ~10 min"
+interview_real_02,900,interview,,"multi-person podcast, ~15 min"
+sports_real_01,480,sports,,"fast-motion game clip, ~8 min"
+sports_real_02,600,sports,,"sports highlights, ~10 min"
+scene_change_01,300,scene_change,,"frequent cuts, ~5 min"
+scene_change_02,240,scene_change,,"location transitions, ~4 min"
+low_info_01,600,low_information,,"static camera, ~10 min"
+no_audio_01,300,no_audio,,"silent video, ~5 min"

@@ -1,0 +1,45 @@
+/* ── Dark Theme ────────────────────────────────────
+   Override tokens for dark mode.
+   Activated by [data-theme="dark"] on <html> or <body>.
+*/
+
+[data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-muted: #334155;
+  --color-border: #334155;
+  --color-border-hover: #475569;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #64748b;
+  --color-primary: #818cf8;
+  --color-primary-hover: #6366f1;
+  --color-primary-light: #1e1b4b;
+  --color-primary-border: #3730a3;
+  --color-success: #22c55e;
+  --color-success-light: #052e16;
+  --color-success-border: #166534;
+  --color-warning: #f59e0b;
+  --color-warning-light: #451a03;
+  --color-warning-border: #92400e;
+  --color-danger: #ef4444;
+  --color-danger-light: #450a0a;
+  --color-danger-border: #991b1b;
+  --color-info: #818cf8;
+  --color-info-light: #1e1b4b;
+
+  --color-status-running: #818cf8;
+  --color-status-completed: #22c55e;
+  --color-status-failed: #ef4444;
+  --color-status-cancelled: #64748b;
+  --color-status-queued: #64748b;
+  --color-playhead: #ef4444;
+
+  --gradient-header: linear-gradient(135deg, #1e1b4b, #312e81);
+  --gradient-progress: linear-gradient(90deg, #818cf8, #6366f1);
+  --gradient-summary: linear-gradient(135deg, #1e1b4b, #312e81);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+}

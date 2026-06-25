@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "video_id": "interview_001",
+  "duration": 90.0,
+  "generated_at": "2026-06-20T12:00:00Z",
+  "candidates": [
+    {
+      "id": "cand_0001",
+      "start_time": 0.0,
+      "end_time": 15.0,
+      "duration": 15.0,
+      "scores": {
+        "object": 0.5,
+        "motion": 0.2,
+        "speech": 0.8,
+        "scene": 0.2,
+        "quality": 0.7
+      },
+      "reason": [
+        "双人对话"
+      ],
+      "metadata": {
+        "source": "highlight_service",
+        "window_index": 0
+      }
+    },
+    {
+      "id": "cand_0002",
+      "start_time": 18.0,
+      "end_time": 35.0,
+      "duration": 17.0,
+      "scores": {
+        "object": 0.9,
+        "motion": 0.7,
+        "speech": 0.3,
+        "scene": 0.2,
+        "quality": 0.6
+      },
+      "reason": [
+        "多人对话"
+      ],
+      "metadata": {
+        "source": "highlight_service",
+        "window_index": 1
+      }
+    },
+    {
+      "id": "cand_0003",
+      "start_time": 38.0,
+      "end_time": 55.0,
+      "duration": 17.0,
+      "scores": {
+        "object": 0.3,
+        "motion": 0.1,
+        "speech": 0.9,
+        "scene": 0.3,
+        "quality": 0.8
+      },
+      "reason": [
+        "嘉宾独白"
+      ],
+      "metadata": {
+        "source": "highlight_service",
+        "window_index": 2
+      }
+    },
+    {
+      "id": "cand_0004",
+      "start_time": 58.0,
+      "end_time": 78.0,
+      "duration": 20.0,
+      "scores": {
+        "object": 0.7,
+        "motion": 0.4,
+        "speech": 0.5,
+        "scene": 0.5,
+        "quality": 0.6
+      },
+      "reason": [
+        "互动环节"
+      ],
+      "metadata": {
+        "source": "highlight_service",
+        "window_index": 3
+      }
+    },
+    {
+      "id": "cand_0005",
+      "start_time": 70.0,
+      "end_time": 90.0,
+      "duration": 20.0,
+      "scores": {
+        "object": 0.2,
+        "motion": 0.1,
+        "speech": 0.4,
+        "scene": 0.9,
+        "quality": 0.5
+      },
+      "reason": [
+        "转场"
+      ],
+      "metadata": {
+        "source": "highlight_service",
+        "window_index": 4
+      }
+    }
+  ]
+}

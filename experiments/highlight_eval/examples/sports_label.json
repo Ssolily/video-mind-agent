@@ -1,0 +1,10 @@
+{
+  "video_id": "sports_001",
+  "video_path": "",
+  "duration": 60.0,
+  "labels": [
+    {"id": "gt_001", "start_time": 0.0, "end_time": 12.0, "rating": 5, "category": "action", "note": "比赛高潮"},
+    {"id": "gt_002", "start_time": 15.0, "end_time": 30.0, "rating": 5, "category": "action", "note": "得分"},
+    {"id": "gt_003", "start_time": 42.0, "end_time": 55.0, "rating": 4, "category": "visual", "note": "特写"}
+  ]
+}

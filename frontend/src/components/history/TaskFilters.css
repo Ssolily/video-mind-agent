@@ -1,0 +1,8 @@
+.task-filters { display: flex; flex-direction: column; gap: var(--space-2); }
+.task-filters__search { padding: var(--space-2) var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-md); font-size: var(--font-size-md); background: var(--color-surface); color: var(--color-text); outline: none; }
+.task-filters__search:focus { border-color: var(--color-primary); box-shadow: 0 0 0 2px var(--color-primary-light); }
+.task-filters__statuses { display: flex; gap: var(--space-1); flex-wrap: wrap; }
+.task-filters__status-btn { font-size: var(--font-size-xs); padding: var(--space-1) var(--space-2); border: 1px solid var(--color-border); border-radius: var(--radius-full); background: var(--color-surface); color: var(--color-text-secondary); cursor: pointer; }
+.task-filters__status-btn:hover { border-color: var(--color-primary-border); }
+.task-filters__status-btn--active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+.task-filters__sort { padding: var(--space-1) var(--space-2); border: 1px solid var(--color-border); border-radius: var(--radius-md); font-size: var(--font-size-sm); background: var(--color-surface); color: var(--color-text); outline: none; align-self: flex-start; }

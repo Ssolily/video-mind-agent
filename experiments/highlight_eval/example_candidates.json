@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "video_id": "example_001",
+  "duration": 30.0,
+  "generated_at": "2026-06-20T12:00:00Z",
+  "candidates": [
+    {
+      "id": "cand_0001",
+      "start_time": 2.0,
+      "end_time": 16.0,
+      "duration": 14.0,
+      "scores": {
+        "object": 0.10,
+        "motion": 0.20,
+        "speech": 0.80,
+        "scene": 0.50,
+        "quality": 0.70
+      },
+      "metadata": {"source": "highlight_service", "window_index": 0}
+    },
+    {
+      "id": "cand_0002",
+      "start_time": 19.0,
+      "end_time": 28.0,
+      "duration": 9.0,
+      "scores": {
+        "object": 0.30,
+        "motion": 0.40,
+        "speech": 0.60,
+        "scene": 0.90,
+        "quality": 0.70
+      },
+      "metadata": {"source": "highlight_service", "window_index": 1}
+    },
+    {
+      "id": "cand_0003",
+      "start_time": 6.0,
+      "end_time": 14.0,
+      "duration": 8.0,
+      "scores": {
+        "object": 0.05,
+        "motion": 0.10,
+        "speech": 0.40,
+        "scene": 0.20,
+        "quality": 0.50
+      },
+      "metadata": {"source": "highlight_service", "window_index": 2}
+    },
+    {
+      "id": "cand_0004",
+      "start_time": 0.0,
+      "end_time": 30.0,
+      "duration": 30.0,
+      "scores": {
+        "object": 0.02,
+        "motion": 0.05,
+        "speech": 0.10,
+        "scene": 1.00,
+        "quality": 0.30
+      },
+      "metadata": {"source": "highlight_service", "window_index": 3}
+    }
+  ]
+}

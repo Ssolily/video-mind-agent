@@ -1,0 +1,15 @@
+{
+  "name": "baseline",
+  "description": "Default weights — balanced across all dimensions",
+  "weights": {
+    "object": 0.25,
+    "motion": 0.20,
+    "speech": 0.20,
+    "scene": 0.15,
+    "quality": 0.20
+  },
+  "diversity_lambda": 0.15,
+  "min_score": 0.0,
+  "min_duration": 3.0,
+  "max_duration": 45.0
+}

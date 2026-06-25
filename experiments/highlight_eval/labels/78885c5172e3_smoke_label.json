@@ -1,0 +1,15 @@
+{
+  "video_id": "78885c5172e3",
+  "video_path": "data/demo_candidates_e2e.mp4",
+  "duration": 30.0,
+  "labels": [
+    {
+      "id": "gt_001",
+      "start_time": 0.0,
+      "end_time": 30.0,
+      "rating": 5,
+      "category": "mixed",
+      "note": "Smoke label - full video"
+    }
+  ]
+}

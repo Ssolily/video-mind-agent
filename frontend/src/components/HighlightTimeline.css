@@ -1,0 +1,111 @@
+.highlight-timeline {
+    font-size: var(--font-size-sm);
+  color: var(--color-text);
+  user-select: none;
+}
+
+.highlight-timeline--empty {
+  opacity: 0.5;
+}
+
+.highlight-timeline__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.highlight-timeline__track {
+  position: relative;
+  height: 36px;
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  overflow: visible;
+}
+
+.highlight-timeline__bar {
+  height: 24px;
+  top: 6px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary-border);
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  z-index: 2;
+}
+
+.highlight-timeline__bar:hover {
+  background: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary-border);
+}
+
+.highlight-timeline__bar--active {
+  background: var(--color-primary);
+  box-shadow: 0 0 0 2px var(--color-primary);
+  z-index: 3;
+}
+
+.highlight-timeline__bar--selected {
+  background: var(--color-primary-hover);
+}
+
+.highlight-timeline__playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-playhead);
+  z-index: 4;
+  pointer-events: none;
+  transition: left 0.1s linear;
+}
+
+.highlight-timeline__tick {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.highlight-timeline__current-time {
+  text-align: center;
+  margin-top: 4px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.highlight-timeline__empty-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Tooltip */
+.highlight-timeline__tooltip {
+  position: fixed;
+  z-index: 1000;
+  background: #1f2937;
+  color: #fff;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translateY(-100%);
+  margin-top: -8px;
+}
+
+/* Mobile: horizontal scroll */
+@media (max-width: 768px) {
+  .highlight-timeline__track {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

@@ -1,0 +1,41 @@
+# =============================================================================
+# VideoMind Agent - Docker Compose
+# =============================================================================
+# Start: docker compose up -d
+# Stop:  docker compose down
+# Logs:  docker compose logs -f backend
+#
+# First version: backend only. Frontend runs locally via `cd frontend && npm run dev`.
+# This keeps Docker image small and avoids Node/Vite inside a production container.
+# =============================================================================
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: videomind-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    env_file:
+      - .env.docker
+    environment:
+      - VIDEOMIND_DATA_DIR=/app/data
+      - VIDEOMIND_HOST=0.0.0.0
+      - VIDEOMIND_PORT=8000
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+    # For GPU support (optional): uncomment the lines below and set VIDEOMIND_DEVICE=cuda in .env.docker
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - capabilities: [gpu]

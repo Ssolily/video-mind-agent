@@ -1,0 +1,48 @@
+.score-breakdown-bars {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.score-breakdown-bars__empty {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.score-breakdown-bars__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.score-breakdown-bars__name {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  width: 56px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.score-breakdown-bars__track {
+  flex: 1;
+  height: 10px;
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.score-breakdown-bars__fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.score-breakdown-bars__score {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  width: 36px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

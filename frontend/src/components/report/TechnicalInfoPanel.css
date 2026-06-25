@@ -1,0 +1,92 @@
+.technical-info-panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+}
+
+.technical-info-panel__summary {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text);
+  cursor: pointer;
+  user-select: none;
+}
+
+.technical-info-panel__summary:hover {
+  background: var(--color-surface-muted);
+}
+
+.technical-info-panel__body {
+  padding: 0 var(--space-4) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3);
+}
+
+.technical-info-panel__section {
+  margin-bottom: var(--space-3);
+}
+
+.technical-info-panel__section-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--space-2);
+  color: var(--color-text);
+}
+
+.technical-info-panel__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.technical-info-panel__step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) 0;
+}
+
+.technical-info-panel__step--ok { color: var(--color-success); }
+.technical-info-panel__step--error { color: var(--color-danger); }
+.technical-info-panel__step-icon { flex-shrink: 0; }
+.technical-info-panel__step-name { font-weight: var(--font-weight-medium); color: var(--color-text); }
+.technical-info-panel__step-detail { color: var(--color-text-muted); }
+
+.technical-info-panel__warnings {
+  margin: 0;
+  padding-left: var(--space-4);
+  font-size: var(--font-size-xs);
+  color: var(--color-warning);
+}
+
+.technical-info-panel__copy-btn {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  margin-bottom: var(--space-2);
+}
+
+.technical-info-panel__copy-btn:hover {
+  background: var(--color-primary-light);
+}
+
+.technical-info-panel__json {
+  background: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 300px;
+  overflow-y: auto;
+  color: var(--color-text);
+}

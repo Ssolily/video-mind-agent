@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Runtime data
+data/
+logs/
+*.pid
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Generated files
+dist/
+build/
+
+# Experiments (runtime outputs)
+experiments/highlight_eval/results/
+!experiments/highlight_eval/results/.gitkeep
+!experiments/highlight_eval/results/example/
+
+
+# Real dataset (video files, runtime outputs, local paths)
+experiments/highlight_eval/real_dataset/results/
+experiments/highlight_eval/real_dataset/videos/
+experiments/highlight_eval/real_dataset/raw/
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+
+# pytest tmp
+/test_tmp/
+
+# Runtime logs
+svr.log
+svr2.log
+
+# Model weights (auto-downloaded)
+/yolo11n.pt
+backend/yolo11n.pt
+
+# SAM 2 (optional, embedded git repo)
+sam2/
+
+# Codex/Agent temp scripts
+scripts/_*.py
+backend/_render_md_fn.txt
+backend/_*.txt
