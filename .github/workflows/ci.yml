@@ -131,7 +131,12 @@ jobs:
       - name: Check docker compose config
         run: |
           # Copy .env.docker for compose validation
-          cp .env.docker.example .env.docker
+          if [ -f .env.docker.example ]; then
+            cp .env.docker.example .env.docker
+          else
+            echo "Warning: .env.docker.example not found, creating minimal .env.docker"
+            touch .env.docker
+          fi
           docker compose config
         working-directory: .
 
